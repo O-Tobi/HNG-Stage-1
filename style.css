@@ -172,24 +172,13 @@
     background-color: yellow;
   }
 
-  .correctAlert {
+  .alert {
     text-align: center;
     margin-top: 10px;
     padding: 10px;
     width: 50%;
     font-size: 25px;
     z-index: 1;
-    background-color: green;
-  }
-
-  .wrongAlert {
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    width: 50%;
-    font-size: 25px;
-    z-index: 1;
-    background-color: red;
   }
 
   /* tablet mode */

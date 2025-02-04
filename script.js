@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     let currentScore = parseInt(scoreCard.innerHTML) || 0; // Get the current score, default to 0 if empty
                     scoreCard.innerHTML = currentScore + 1;
                     gameStatus.innerHTML = "You guessed right!";
-                    gameStatus.classList.add("correctAlert");
+                    gameStatus.style.backgroundColor = "green";
 
                 } else {
                     gameStatus.innerHTML = "Try again";
-                    gameStatus.classList.add("wrongAlert");
+                    gameStatus.style.backgroundColor = "red";
                 }
             }
 
