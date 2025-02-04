@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     let currentScore = parseInt(scoreCard.innerHTML) || 0; // Get the current score, default to 0 if empty
                     scoreCard.innerHTML = currentScore + 1;
                     gameStatus.innerHTML = "You guessed right!";
-                    gameStatus.style.backgroundColor = "green";
+                    gameStatus.classList.add("correctAlert");
 
                 } else {
                     gameStatus.innerHTML = "Try again";
-                    gameStatus.style.backgroundColor = "red"
+                    gameStatus.classList.add("wrongAlert");
                 }
             }
 
@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
             colorBoxx.innerHTML = "?";
             gameStatus.innerHTML = "";
             gameStatus.style.backgroundColor = "";
+            gameStatus.style.opacity = "0";
         })
     };
 
