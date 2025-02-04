@@ -87,12 +87,12 @@
   .colorBtn {
     font-size: 1.5rem;
     width: 120px;
-    height: 80px;
+    height: 60px;
     border-radius: 10px;
     border: 2px solid #fafafa;
     box-shadow: 3px 3px #fafafa;
     cursor: pointer;
-    margin: 16px 16px;
+    margin: 10px 10px;
   }
   
   /* Button Hover Effects */
@@ -140,16 +140,6 @@
     transform: translateY(-2px);
   }
   
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  /* Disabled Buttons */
-  button:disabled {
-    pointer-events: none;
-  }
-  
   /* Buttons Container */
   .btnDiv {
     display: flex;
@@ -180,6 +170,26 @@
   
   .yellow {
     background-color: yellow;
+  }
+
+  .correctAlert {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 25px;
+    z-index: 1;
+    background-color: green;
+  }
+
+  .wrongAlert {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 25px;
+    z-index: 1;
+    background-color: red;
   }
 
   /* tablet mode */

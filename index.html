@@ -9,10 +9,10 @@
 </head>
 <body>
     <main>
+        <div class="alert" data-testid="gameStatus"></div>
         <h1>Color Guess Game</h1>
         <p data-testid="gameInstructions" class="gameInstructions"><span><img src="./assets/triangle.svg" alt="triangle" class="triangle"></span> Guess the Correct Color!</p>
         <div class="box">
-            <div data-testid="gameStatus">correct or wrong</div>
             <div class="colorBox" data-testid="colorBox">?</div>
         </div>
 
@@ -22,7 +22,7 @@
         </div>
 
         <div class="btnDiv">
-            <button class="colorBtn red" id="opp" data-testid="colorOption" ></button>
+            <button class="colorBtn red" data-testid="colorOption" ></button>
             <button class="colorBtn blue" data-testid="colorOption" ></button>
             <button class="colorBtn green" data-testid="colorOption" ></button>
             <button class="colorBtn purple" data-testid="colorOption" ></button>
