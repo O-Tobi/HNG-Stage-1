@@ -18,16 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Get the color class of the clicked button
                 const newClass = classListArray[1];
 
-                // Change the color of the box to match the clicked button
-                colorBoxx.style.backgroundColor = newClass;
-                colorBoxx.innerHTML = "";
-
                 //check if selected color matches the randomly chosen color
                 if (newClass === randomColor) {
                     let currentScore = parseInt(scoreCard.innerHTML) || 0;
                     scoreCard.innerHTML = currentScore + 1;
                     gameStatus.innerHTML = "You guessed right!";
                     gameStatus.style.backgroundColor = "green";
+                    colorBoxx.style.backgroundColor = randomColor;
+                    colorBoxx.innerHTML = "";
+                    colorBoxx.classList.add("happy");
                 } else {
                     gameStatus.innerHTML = "Try again";
                     gameStatus.style.backgroundColor = "red";
@@ -40,14 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     gameStatus.style.transition = "opacity 1.5s ease-out"; // Smooth fade-out effect
                     gameStatus.style.opacity = "0";
-                }, 500);
+                }, 600);
 
                 // Remove the text after the fade-out completes
                 setTimeout(() => {
                     gameStatus.innerHTML = "";
                     gameStatus.style.backgroundColor = "";
                     gameStatus.style.opacity = "1";
-                }, 1500);
+                    colorBoxx.style.backgroundColor = "black";
+                    colorBoxx.innerHTML = "?";
+                    colorBoxx.classList.remove("happy");
+                }, 3500);
 
             }
 
