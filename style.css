@@ -87,12 +87,12 @@
   .colorBtn {
     font-size: 1.5rem;
     width: 120px;
-    height: 80px;
+    height: 60px;
     border-radius: 10px;
     border: 2px solid #fafafa;
     box-shadow: 3px 3px #fafafa;
     cursor: pointer;
-    margin: 16px 16px;
+    margin: 10px 10px;
   }
   
   /* Button Hover Effects */
@@ -140,16 +140,6 @@
     transform: translateY(-2px);
   }
   
-  button:active {
-    box-shadow: none;
-    transform: translateY(0);
-  }
-  
-  /* Disabled Buttons */
-  button:disabled {
-    pointer-events: none;
-  }
-  
   /* Buttons Container */
   .btnDiv {
     display: flex;
@@ -181,6 +171,46 @@
   .yellow {
     background-color: yellow;
   }
+
+  .alert {
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    width: 50%;
+    font-size: 25px;
+    z-index: 1;
+  }
+
+  .happy {
+    display: inline-block;
+    padding: 20px;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    animation: bounce 1s infinite, glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Bouncing effect */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Glowing effect */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ffeb3b;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff9800;
+    }
+}
+
 
   /* tablet mode */
   @media (max-width: 768px) {
@@ -304,6 +334,13 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+  }
+
+  .alert {
+    font-size: 16px;
+    margin-top: 8px;
+    width: 80%;
+    padding: 8px;
   }
 
   
